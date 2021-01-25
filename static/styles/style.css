@@ -1,0 +1,170 @@
+/*MENU*/
+.logo{
+    font-weight: 600;
+    font-size: 40px;
+    color: #ea3a60 !important;
+}
+.menusag{
+    font-weight: 600;
+}
+.menusag-first{
+    color: #ea3a60 !important;
+}
+.navbar-nav .nav-item a:hover{
+    color: #ea3a60 !important;
+}
+.menuarkaplan{
+    background-color: white;
+}
+/*MENU*/
+
+
+/*SECTİON2*/
+.section2left h3{
+    font-size: 45px;
+    font-weight: bold;
+    width: 220px;
+    border-bottom: 2px solid #ea3a60;
+}
+.section2right h4{
+    font-size: 45px;
+    margin-top: 100px;
+}
+.section2right p{
+    font-size: 17px;
+}
+
+/*SECTİON8*/
+.section8col h3{
+    color: #ea3a60; 
+    font-size: 55px;
+    font-weight: bold;
+}
+.section8col{
+    background: #f8f9fa;
+    padding: 50px 0;
+    border-radius:5px;
+    position: relative;
+    transition: 0.3s ease;
+}
+#section8 .section8h3{
+    font-size: 45px;
+    color: black;
+    border-bottom:2px solid #ea3a60 ;
+}
+.section8col .fa{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 50px;
+    color: #e8ebee;
+    margin-right: -5px;
+    margin-top: -3px;
+}
+.section8col .far{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 50px;
+    color: #e8ebee;
+    margin-right: -5px;
+    margin-top: -3px;
+}
+.section8col .far:hover{
+    color: black;
+}
+.section8col .fa:hover{
+    color: black;
+}
+.section8h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*SECTİON11*/
+
+.section11h3{
+    font-size: 45px;
+    font-weight: bold;
+    border-bottom:2px solid #ea3a60 ;
+}
+#section11 .col-md-4{
+    color: black;
+} 
+#section11 .col-md-4 b{
+    color: black;
+    font-size: 20px;
+}
+#section11 input:focus{
+    color: #ea3a60;   
+        border-color:  #ea3a60;
+}
+/*FOOTER*/
+footer{
+    background-color: #090909;
+    height: 10px !important;
+}
+footer i:hover{
+    color: #ea3a60;   
+    cursor: pointer;
+}
+footer i{
+    margin-left: 4%;
+    font-size: 18px;
+    color: #5a5750;
+}
+footer a{
+    margin-top: 1%;
+    color: white;
+    margin-left: 5px;
+}
+footer a:hover{
+    color: #e8ebee;
+}
+
+
+
+/*SECTİON MOBİL*/
+@media screen and (min-width: 480px) and (max-width:719px){
+
+#section2 .btn-outline-danger{
+    margin-bottom: 50px;  
+} 
+
+
+footer i{
+    margin-left: 7%;
+    font-size: 18px;
+    color: #5a5750;
+   
+}
+footer p{
+    margin-left: 10%;
+    margin-top: 1%;
+    color: #5a5750;
+}
+}
+/*SECTİON 720*/
+@media screen and (min-width: 720px) and (max-width:959px){
+    #section2 .btn-outline-danger{
+        margin-bottom: 50px;
+    }
+   
+}
+/*SECTİON 960*/
+@media screen and (min-width: 960px) and (max-width:1365px){
+    #section2 .btn-outline-danger{
+        margin-bottom: 50px;
+    }
+    footer i{
+        margin-left: 4%;
+        font-size: 18px;
+        color: #5a5750;
+       
+    }
+    footer p{
+        margin-left: 30%;
+        margin-top: 1%;
+        color: #5a5750;
+    }
+}

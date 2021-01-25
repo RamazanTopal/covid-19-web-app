@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}   
+
+  <div class="container" style="margin-top: 100px;">
+    <h1 style="font-size: 30px;color: blue;text-align: center;">Covid-19 Dünya Vaka Sayıları</h1>
+    <table class="table  table-bordered table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Ülke</th>
+          <th scope="col">Toplam Vaka</th>
+          <th scope="col">Toplam Ölü Sayısı</th>
+          <th scope="col">Toplam İyileşen Sayısı </th>
+          <th scope="col">Aktif Vaka Sayısı </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in sayi %}
+        <tr>
+            <th>{{ item.id }}</th>
+            <td>{{item.country}}</td>
+            <td>{{item.confirmed}}</td>
+            <td>{{item.deaths}}</td>
+            <td>{{item.recovered}}</td>
+            <td>{{item.active}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{%endblock%}

@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% block content %}   
+    <!--1.section-->
+   <section id="section1" class="container-fluid" style="margin-top: 100px;" >
+     <div class="container">
+            <div class="toplam">
+                <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Toplam Ülke Sayısı</th>
+                        <th scope="col">Toplam Vaka</th>
+                        <th scope="col">Toplam Ölü Sayısı</th>
+                        <th scope="col">Toplam İyileşen Sayısı </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">221</th>
+                        <td>{{toplam}}</td>
+                        <td>{{olu}}</td>
+                        <td>{{iyilesen}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            
+    <div class="row mt-5">
+        <div class="col-md-12 mb-5">
+            <div class="card">
+                <div class="card-header" style="background-color: #f5f5f5;
+                border-color: #ddd;font-weight: bold;text-align: center;">
+                            Dikkat
+                </div>
+                <div class="card-body">
+                  <p class="card-text" style="text-align: center;">COVID-19 pandemisinin tam olarak sonlanmaması nedeni ile, virüse özgün etkili bir tedavi ve/veya aşı bulunana kadar risk devam etmektedir. Pandeminin kontrol edildiği bu dönemde diğer sağlık hizmetlerine olan ihtiyaç giderek artmıştır. Ancak salgın eğrisinin düzleşmesi, toplam vaka sayısını azaltmaz, hastalık yükünü daha uzun bir süreye yayar. Bu nedenle pandeminin devam ettiği dikkate alınarak diğer sağlık hizmetlerinin de başlaması kaçınılmazdır. Bu durum COVID-19 olan ve olmayan hastalara aynı sistem içinde hizmet verilmesi gerekliliğini ortaya koymaktadır. </p>
+                </div>
+              
+              </div>
+        </div>
+        <h1 class="col-md-12 mb-5" style="text-align: center;font-size: 60px;color: red;">Türkiye</h1>
+        <div class="col-md-4">
+            <div class="card"style="width: 20rem;"">
+                <div class="card-header" style="background-color: #f5f5f5;
+                border-color: #ddd;font-weight: bold;text-align: center;">
+                            AKTİF VAKA SAYISI
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">{{turkey_cases.active}}</h5>
+                  <p class="card-text" style="text-align: center;">Şuan aktif hasta sayısı</p>
+                </div>
+                <div class="card-body">
+                 
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 ">
+            <div class="card" style="width: 20rem;">
+                <div class="card-header" style="background-color: #f5f5f5;
+                border-color: #ddd;font-weight: bold;text-align: center;">
+                            TOPLAM İYİLEŞEN SAYISI
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">{{turkey_cases.recovered}}</h5>
+                  <p class="card-text" style="text-align: center;">Toplam İyileşen Sayısı</p>
+                </div>
+                <div class="card-body">
+                 
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 20rem;">
+                <div class="card-header" style="background-color: #f5f5f5;
+                border-color: #ddd;font-weight: bold;text-align: center;">
+                            TOPLAM ÖLEN SAYISI
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">{{turkey_cases.deaths}}</h5>
+                  <p class="card-text" style="text-align: center;">Toplam Ölen Sayısı</p>
+                </div>
+                <div class="card-body">
+                  
+                </div>
+              </div>
+        </div>
+    
+    </div>
+            
+     </div>
+     
+   </section>
+   
+   <!--2.section-->
+   <section id="section2" class="container-fluid mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="section2left col-md-6 col-sm-12 .col-xs-12">
+                    <h3 class="mb-5">Covid Hakkında</h3>
+                    <img src="{{url_for('static',filename='img/about1.jpg')}}" alt="about" class="img-fluid">
+                </div>
+                <div class="section2right col-md-6 col-sm-12 .col-xs-12">
+                    <h4>Nasıl Ortaya Çıktı ?</h4>
+                    <p class="mt-5">Dünya üzerinde ilk kez 1960’lı yıllarda görülen 
+                        Covid-19 olarak adlandırılan virüs, koronavirüs ya da corona 
+                        virüsü adıyla biliniyor. Koronavirüs aralık ayında Çin’in Wuhan 
+                        bölgesinde ortaya çıkmasıyla birlikte dünyayı etkisi altına aldı.
+                         Hastalığın başlangıç kaynağı henüz netlik kazanmamıştır. Ancak eldeki veriler, 
+                        Çin’in Wuhan bölgesindeki Huanan Deniz Ürünleri Toptan Satış 
+                        Pazarında yasadışı olarak satılan vahşi hayvanları işaret etmektedir.</p>  
+                          <button class="btn btn-outline-danger btn-lg section1btn mt-5">Covid Rehberi Download</button>        
+                </div>
+            </div>
+        </div>
+   </section>
+
+
+  <!--8.section-->
+  <section id="section8" class="container-fluid mt-5">
+      <div class="container">
+        <div class="row">
+                <h3 class="section8h3 ml-3">Covid-19</h3>
+        </div>
+        <div class="row mt-5">
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="section8col">
+                        <span class="fa fa-tasks" aria-hidden="true"></span>
+                        <h3 class="text-center">100m+</h3>
+                        <p class="text-center">Toplam Vaka Sayısı</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="section8col">
+                        <span class="fa fa-users" aria-hidden="true"></span>
+                        <h3 class="text-center">2m+</h3>
+                        <p class="text-center"> Toplam Ölü Sayısı</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="section8col"> 
+                        <span class="far fa-smile" aria-hidden="true"></span>
+                        <h3 class="text-center">54m+</h3>
+                        <p class="text-center">Toplam İyileşen Sayısı</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="section8col">
+                      <span class="fa fa-trophy" aria-hidden="true"></span>
+                        <h3 class="text-center">100+</h3>
+                        <p class="text-center">Makale Sayısı</p>
+                    </div>
+                </div>
+        </div>
+      </div>
+  </section>
+  
+  <!--11.section-->
+  <section id="section11" class="container-fluid mt-5">
+    <div class="container">
+        <div class="row">
+            <h3 class="section11h3 mb-3 ml-3">Sorularınız için lütfen mesaj atınız</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mt-5">
+                <form action="index.html" method="post">
+                    <input type="text" class="form-control" name="isim" placeholder="Name"><br>
+                    <input type="email" class="form-control" name="email" placeholder="E-mail"><br>
+                    <textarea class="form-control" name="mesaj" placeholder="Your Message" style="height:150px;"></textarea><br>
+                    <button class="btn btn-danger theme-button btn-lg" type="submit">Gönder</button>
+                  </form>
+            </div>
+            <div class="col-md-4  mt-5">
+                <b>Telefon:</b>
+                <p>534 346 43 23<br>+11-22-55-66-06</p>
+                <b>Email:</b>
+                <p>covid19-vakasayisi@mail.com</p>
+              </div>
+        </div>
+    </div>
+  </section>
+  {% endblock %}
