@@ -1,4 +1,4 @@
-from flask import Flask, escape, request,url_for,render_template,abort
+from flask import Flask, escape, request,url_for,render_template,abort,session,redirect,request
 from covid import Covid
 from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin
@@ -20,9 +20,15 @@ class Makale(db.Model):
     yazar=db.Column(db.String(255))
     slug=db.Column(db.String(255))
     tarih=db.Column(db.DateTime)
-
-admin.add_view(ModelView(Makale,db.session))
 #db.create_all() 
+class ModelViewKıyasla(ModelView):
+    def is_accessible(self):
+        if "logged_in" in session:
+            return True
+        else:
+            abort(403)
+admin.add_view(ModelViewKıyasla(Makale,db.session))
+
 @app.route('/')
 def index():
     covid = Covid()
@@ -46,6 +52,22 @@ def makale():
     posts=Makale.query.all()
     return render_template('makale.html',posts=posts)
 
+@app.route('/login',methods=["GET","POST"])
+def login():
+    if request.method == "POST":
+        if request.form.get("username") == "ramazan" and request.form.get("password") == "1346795":
+            session['logged_in']=True
+            return redirect("/admin")
+        else:
+            return render_template('login.html',hata=True)
+    return render_template('login.html')
+    
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')
+
 
 @app.route("/post/<string:slug>")
 def post(slug):
@@ -55,5 +77,5 @@ def post(slug):
     except sqlalchemy.orm.exc.NoResultFound:
         abort(404)
 if __name__ == '__main__':
-    #app.debug = True
+    app.debug = True
     app.run()
