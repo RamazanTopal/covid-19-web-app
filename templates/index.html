@@ -89,7 +89,6 @@
      </div>
      
    </section>
-   
    <!--2.section-->
    <section id="section2" class="container-fluid mt-5">
         <div class="container">
@@ -113,37 +112,36 @@
         </div>
    </section>
 
-
-  <!--8.section-->
-  <section id="section8" class="container-fluid mt-5">
+    <!--3.section-->
+    <section id="section3" class="container-fluid mt-5">
       <div class="container">
         <div class="row">
-                <h3 class="section8h3 ml-3">Covid-19</h3>
+                <h3 class="section3h3 ml-3">Covid-19</h3>
         </div>
         <div class="row mt-5">
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="section8col">
+                    <div class="section3col">
                         <span class="fa fa-tasks" aria-hidden="true"></span>
                         <h3 class="text-center">100m+</h3>
                         <p class="text-center">Toplam Vaka Sayısı</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="section8col">
+                    <div class="section3col">
                         <span class="fa fa-users" aria-hidden="true"></span>
                         <h3 class="text-center">2m+</h3>
                         <p class="text-center"> Toplam Ölü Sayısı</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="section8col"> 
+                    <div class="section3col"> 
                         <span class="far fa-smile" aria-hidden="true"></span>
                         <h3 class="text-center">54m+</h3>
                         <p class="text-center">Toplam İyileşen Sayısı</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="section8col">
+                    <div class="section3col">
                       <span class="fa fa-trophy" aria-hidden="true"></span>
                         <h3 class="text-center">100+</h3>
                         <p class="text-center">Makale Sayısı</p>
@@ -153,20 +151,26 @@
       </div>
   </section>
   
-  <!--11.section-->
-  <section id="section11" class="container-fluid mt-5">
+  
+  <!--4.section-->
+  <section id="section4" class="container-fluid mt-5">
     <div class="container">
         <div class="row">
-            <h3 class="section11h3 mb-3 ml-3">Sorularınız için lütfen mesaj atınız</h3>
+            <h3 class="section4h3 mb-3 ml-3">Sorularınız için lütfen mesaj atınız</h3>
         </div>
         <div class="row">
             <div class="col-md-8 mt-5">
-                <form action="index.html" method="post">
-                    <input type="text" class="form-control" name="isim" placeholder="Name"><br>
+                <form action="http://127.0.0.1:5000/" method="POST">
+                     {% if success %}
+                     <div class="alert alert-success" role="alert">
+                      {{success}}
+                     </div>
+                     {% endif %}
+                    <input type="text" class="form-control" name="isim" placeholder="İsminiz"><br>
                     <input type="email" class="form-control" name="email" placeholder="E-mail"><br>
-                    <textarea class="form-control" name="mesaj" placeholder="Your Message" style="height:150px;"></textarea><br>
+                    <textarea class="form-control" name="mesaj" placeholder="Mesajınız" style="height:150px;"></textarea><br>
                     <button class="btn btn-danger theme-button btn-lg" type="submit">Gönder</button>
-                  </form>
+                </form>
             </div>
             <div class="col-md-4  mt-5">
                 <b>Telefon:</b>

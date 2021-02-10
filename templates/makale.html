@@ -6,14 +6,13 @@
         <div class="col-md-4">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                  <h5 class="card-title">{{post.baslik}}</h5>
+                  <h5 class="card-title" style="text-align: center;color: #ea3a60;">{{post.baslik}}</h5>
+                  <p style="  overflow: hidden;
+                  max-height: 120px;">{{post.makale}}</p>
+                  <a style="float: right;" href={{"/post/"+post.slug}} class="card-link btn btn-primary btn-small">Detaylar</a>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">{{post.yazar}}</li>
-                  <li class="list-group-item">{{post.tarih.strftime('%B %d, %Y')}}</li>
-                </ul>
-                <div class="card-body">
-                  <a href={{"/post/"+post.slug}} class="card-link btn btn-primary">Detaylar</a>
+                <div class="card-footer">
+                  <p style="float: right;font-size: 20px;font-weight: 200;">Yazar : {{post.yazar}} | <span style="font-size: 14px;">{{post.tarih.strftime('%B %d, %Y')}} </span></p>
                 </div>
               </div>
         </div>

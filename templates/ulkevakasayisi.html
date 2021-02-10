@@ -6,7 +6,6 @@
     <table class="table  table-bordered table-dark">
       <thead>
         <tr>
-          <th scope="col">#</th>
           <th scope="col">Ülke</th>
           <th scope="col">Toplam Vaka</th>
           <th scope="col">Toplam Ölü Sayısı</th>
@@ -17,7 +16,6 @@
       <tbody>
         {% for item in sayi %}
         <tr>
-            <th>{{ item.id }}</th>
             <td>{{item.country}}</td>
             <td>{{item.confirmed}}</td>
             <td>{{item.deaths}}</td>
